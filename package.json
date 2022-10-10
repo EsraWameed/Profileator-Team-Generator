@@ -1,0 +1,26 @@
+{
+  "name": "profileator-team-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EsraWameed/Profileator-Team-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EsraWameed/Profileator-Team-Generator/issues"
+  },
+  "homepage": "https://github.com/EsraWameed/Profileator-Team-Generator#readme",
+  "devDependencies": {
+    "jest": "^29.1.2"
+  }
+}
