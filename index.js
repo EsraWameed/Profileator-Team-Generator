@@ -1,9 +1,9 @@
 //requiring packages/ class modules and prompt arrays
 const writeFile = require("./src/writeFile");
 const inquirer = require("inquirer");
-const template = require("pageTemplate");
+const template = require("./src/templatePage");
 const {Manager, promptManager} = require("./lib/Manager");
-const {Engineer, prompEngineer} = require("./lib/Engineer");
+const {Engineer, promptEngineer} = require("./lib/Engineer");
 const {Intern, promptIntern} = require("./lib/Intern");
 //an array to store team members generated
 const teamMembers=[];
@@ -13,10 +13,10 @@ const runApp=() =>{
     inquirer.prompt(promptManager)
     .then((responses)=>{
         responses = new Manager(
-            responses.name,
-            responses.id,
-            responses.email,
-            responses.officeNumber
+            responses._name,
+            responses._id,
+            responses._email,
+            responses._officeNumber
         )
             teamMembers.push(responses);
             return teamPrompts();
@@ -26,16 +26,16 @@ const runApp=() =>{
 const engineerPrompting = () => {
     inquirer.prompt(promptEngineer)
     .then(( responses ) => {
-        responses = new Engineer(responses.name, responses.id, responses.email, responses.github)
+        responses = new Engineer(responses._name, responses._id, responses._email, responses._github)
         teamMembers.push(responses);
         return teamPrompts();
     })
 }
 
 const internPrompting = () => {
-    inquirer.prompt(promptItern)
+    inquirer.prompt(promptIntern)
     .then(( responses ) => {
-        responses = new Intern(responses.name, responses.id, responses.email, responses.school)
+        responses = new Intern(responses._name, responses._id, responses._email, responses._school)
         teamMembers.push(responses);
         return teamPrompts();
     })
