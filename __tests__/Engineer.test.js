@@ -1,5 +1,6 @@
+//requiring parent class Employee
 const { Engineer } = require('../lib/Engineer');
-
+//creating unit test for each property/method to make sure our methods pass jest test
 test('Checking that the engineer is being passed a name', () => {
   const engineer = new Engineer('Esra Wameed', 1234, 'esra@yahoo.com', 'EsraWameed');
   expect(engineer.name).toBe('Esra Wameed');
