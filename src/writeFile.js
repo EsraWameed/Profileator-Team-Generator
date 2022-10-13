@@ -1,7 +1,7 @@
 // require fs
 const fs = require("fs");
 const writeFile = (addHTML) => {
-    fs.writeFile("./dist/index.html", addHTML, (error)=>{
+    fs.writeFile("./index.html", addHTML, (error)=>{
         if(error){
             console.log(error);
         }
